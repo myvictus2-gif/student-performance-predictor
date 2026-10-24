@@ -1,0 +1,8 @@
+# Student Performance Predictor - Python packages
+# Tested with Python 3.13 and the versions shown in the comments.
+streamlit>=1.50     # tested 1.66.1 (top navigation menu needs a recent version)
+scikit-learn>=1.4   # tested 1.9.1
+pandas>=2.1         # tested 3.0.5
+numpy>=1.26         # tested 2.5.3
+plotly>=5.18        # tested 7.1.0
+joblib>=1.3         # tested 1.6.0
