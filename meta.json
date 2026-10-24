@@ -1,0 +1,77 @@
+{
+  "data_source": "Synthetic practice dataset (data/generate_data.py): 1,000 students generated from documented rules, with deliberate errors added for the cleaning step.",
+  "best_model": "Linear Regression",
+  "selection_reason": "Linear Regression has the lowest cross-validated RMSE (4.49 marks) on the training data. The test set was not used to choose.",
+  "test_metrics": {
+    "Accuracy (\u00b15 marks)": 0.705,
+    "MAE": 3.7241765333553896,
+    "RMSE": 4.59472231518051,
+    "R2": 0.8184789841190255
+  },
+  "cv_rmse": 4.490183780244091,
+  "accuracy_tolerance": 5,
+  "n_train": 800,
+  "n_test": 200,
+  "feature_ranges": {
+    "study_hours": {
+      "min": 0.4,
+      "max": 12.0,
+      "median": 3.7
+    },
+    "attendance": {
+      "min": 60.7,
+      "max": 99.9,
+      "median": 87.6
+    },
+    "sleep_hours": {
+      "min": 4.0,
+      "max": 10.4,
+      "median": 6.9
+    },
+    "previous_marks": {
+      "min": 25.0,
+      "max": 100.0,
+      "median": 64.0
+    }
+  },
+  "feature_engineering_effect": {
+    "without engineered features": {
+      "CV RMSE": 5.1121286791052665,
+      "CV RMSE std": 0.23644734826646802,
+      "CV MAE": 4.009586817744692,
+      "CV R2": 0.7336078518745618
+    },
+    "with engineered features": {
+      "CV RMSE": 4.490183780244091,
+      "CV RMSE std": 0.3216303939697402,
+      "CV MAE": 3.5650721873894335,
+      "CV R2": 0.795140180628628
+    }
+  },
+  "cleaning_report": {
+    "rows_loaded": 1025,
+    "missing_before": {
+      "study_hours": 29,
+      "attendance": 29,
+      "sleep_hours": 30,
+      "previous_marks": 31,
+      "final_marks": 0
+    },
+    "duplicates_removed": 25,
+    "impossible_values_set_missing": {
+      "study_hours": 3,
+      "attendance": 3,
+      "sleep_hours": 3,
+      "previous_marks": 3,
+      "final_marks": 0
+    },
+    "rows_without_target_removed": 0,
+    "missing_after_cleaning": {
+      "study_hours": 32,
+      "attendance": 32,
+      "sleep_hours": 33,
+      "previous_marks": 33
+    },
+    "rows_after_cleaning": 1000
+  }
+}
